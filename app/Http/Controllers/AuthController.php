@@ -77,7 +77,7 @@ class AuthController extends Controller
     }
     else
     {
-      return Response::json(['token' => $token]);
+      return Response::json(['token' => $token,"success"=>"Welcome"]);
     }
   }
   public function getUser()

@@ -12,6 +12,10 @@ use App\User;
 
 class NewsletterController extends Controller
 {
+  public function __construct()
+  {
+    $this->middleware("jwt.auth", ["only"=>["store"]]);
+  }
   public function index()
   {
     $newsletters = Newsletter::orderBy('id','desc')->get();

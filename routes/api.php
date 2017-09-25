@@ -16,8 +16,6 @@ Route::post('signUp', 'AuthController@signUp');
 Route::post('signIn', 'AuthController@signIn');
 Route::get('getUser', 'AuthController@getUser');
 
-Route::any('{path?}', 'MainController@index')->where("path", ".+");
-
 Route::get('getNewsletters', 'NewsletterController@index');
 Route::post('storeNewsletter', 'NewsletterController@store');
 Route::get('showNewsletter/{id}', 'NewsletterController@show');
